@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regras do CSS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <h1>Regras e especificidades do CSS</h1>
+        </nav>
+    </header>
+
+    <hr>
+
+    <main>
+        <div class="cascata_e_especificidade">
+            <section>
+                <h2>Regra da cascata no CSS:</h2>
+                <p>A cascata em CSS é o mecanismo que define como os estilos são aplicados quando existem múltiplas regras CSS que podem afetar o mesmo elemento. Em outras palavras, ela determina qual regra tem prioridade e, portanto, qual estilo será aplicado. A cascata leva em consideração vários fatores, como especificidade dos seletores, origem dos estilos (CSS interno, externo, inline, etc.), e ordem de declaração das regras. </p>
+            </section>
+
+            <section>
+                <h2>O que é especificidade:</h2>
+                <p>Em CSS, a especificidade é um algoritmo que determina qual regra de estilo será aplicada a um elemento HTML quando várias regras conflitantes são encontradas. Em outras palavras, é um sistema que define a importância ou "peso" de cada seletor CSS. Quanto maior a especificidade de um seletor, maior a probabilidade de suas regras serem aplicadas. </p>
+            </section>
+
+            <section>
+                <h2>diferença entre as especificidades:</h2>
+                <p>As principais diferenças se encontram nas especificidades do seletor pela tag, pela classe e pelo id, sendo a tag a mais fraca, a classe intermediária e o id a mais forte.</p>
+            </section>
+        </div>
+
+        <div class="combinacao_seletores">
+            <section>
+                <h2>Combinação de seletores:</h2>
+                <ul>
+                    <li><strong>. primeiro h1:</strong> É utilizado quando queremos selecionar uma tag que está dentro de uma classe ou um id. </li>
+                    <li><strong>. primeiro > h1:</strong> É utilizado quando queremos selecionar a tag com mais informações, ou seja, a maior tag.</li>
+                    <li><strong>. primeiro h1 + h1:</strong> É utilizado para selecionar todas as tags do tipo escolhido que estejam abaixo da primeira tag.</li>
+                </ul>
+            </section>
+        </div>
+
+        <div class="pseudo-classes">
+            <section>
+                <h2>Pseudo-classes</h2>
+                <ul>
+                    <li><strong>First child:</strong> É o primeiro "filho", ou seja, a primeira tag dentro da classe.</li>
+                    <li><strong>Last child:</strong> É o último "filho", ou seja, a última tag dentro da classe.</li>
+                    <li><strong>nth child:</strong> É utilizado para escolher o número do "filho" ou a tag dentro de uma classe.</li>
+                    <li><strong>nth-of-type:</strong> É utilizado para o mesmo objetivo, porém, ele escolhe o número de acordo com a tag selecionada.</li>
+                </ul>
+            </section>
+        </div>
+
+        <div class="displays">
+            <section>
+                <h2>Display inline e dispay block:</h2>
+                <p>Em CSS, display: inline e display: block são propriedades que definem como um elemento é exibido na página. Um elemento com display: block ocupa toda a largura disponível, iniciando em uma nova linha, enquanto um elemento com display: inline ocupa apenas o espaço necessário para seu conteúdo e pode compartilhar a linha com outros elementos inline, esses elementos não permitem a definição da largura e da altura.</p>
+                <ul>
+                    <li><strong>Elementos display inline:</strong> a, strong, span, img.</li>
+                    <li><strong>Elementos display block:</strong> h1, p, div, section, main, header, nav</li>
+                </ul>
+            </section>
+        </div>
+
+        <div class="propriedades-e-shorthands">
+            <section>
+                <h2>Propriedades margin, padding e border:</h2>
+                <p>Em CSS, as propriedades margin, padding e border são fundamentais para controlar o espaçamento e a aparência visual de elementos HTML. A margin define o espaçamento externo ao redor de um elemento, a padding define o espaçamento interno entre o conteúdo do elemento e sua borda, e a border adiciona uma borda ao redor do elemento.</p>
+            </section>
+
+            <section>
+                <h2>Opções de shorthands:</h2>
+                <ul>
+                    <li><strong>1 valor:</strong> Em CSS, um shorthand com um único valor aplica esse valor a todas as propriedades relacionadas. Por exemplo, ao usar margin: 10px, a margem superior, inferior, esquerda e direita do elemento serão definidas como 10 pixels.</li>
+                    <li><strong>2 valores:</strong> Em CSS, shorthands com dois valores são frequentemente usadas para definir propriedades como margin, padding, border, e font, entre outras, de forma mais concisa. Em geral, o primeiro valor se refere à parte superior e inferior, enquanto o segundo valor se refere à esquerda e direita.</li>
+                    <li><strong>3 valores:</strong> Em CSS, existem propriedades que aceitam três valores usando a técnica de shorthand. Um exemplo comum é a propriedade padding, que permite definir espaçamento em todas as quatro direções de um elemento (superior, direito, inferior e esquerdo) usando apenas três valores. Nesses casos, o primeiro valor se aplica à parte superior, o segundo aos lados (esquerdo e direito) e o terceiro à parte inferior.</li>
+                    <li><strong>4 valores:</strong> Em CSS, o shorthand para definir margens ou preenchimentos (padding) com quatro valores segue a ordem: topo, direita, inferior, esquerda.</li>
+                </ul>
+            </section>
+        </div>
+
+        <div class="sufixos">
+            <section>
+                <h2>sufixos:</h2>
+                <ul>
+                    <li><strong>Block:</strong> Em CSS, o termo "block" refere-se ao valor da propriedade display que define como um elemento HTML é renderizado na página. Quando um elemento tem display: block, ele ocupa toda a largura disponível do elemento pai, criando uma nova linha antes e depois dele. Elementos com display: block permitem a definição de largura e altura, e são frequentemente usados para estruturar layouts.</li>
+                    <li><strong>Inline:</strong> Em CSS, "inline" refere-se à prática de aplicar estilos diretamente dentro de uma tag HTML usando o atributo style. Embora seja rápido para pequenas alterações, o uso excessivo de CSS inline não é recomendado para projetos maiores devido à falta de organização e dificuldade de manutenção.</li>
+                    <li><strong>Top:</strong> No CSS, o sufixo "top" geralmente se refere às propriedades relacionadas ao posicionamento vertical de um elemento. As propriedades mais comuns com "top" são top, margin-top e padding-top, cada uma com uma função específica.</li>
+                    <li><strong>Bottom:</strong> O sufixo "bottom" em CSS refere-se a propriedades que controlam a parte inferior de um elemento, seja em relação à sua posição ou espaçamento. As propriedades mais comuns com o sufixo "bottom" são: bottom, padding-bottom, margin-bottom e border-bottom.</li>
+                    <li><strong>Left:</strong> A propriedade left em CSS é usada para controlar o posicionamento horizontal de um elemento, especificamente em relação à sua borda esquerda.</li>
+                    <li><strong>Right:</strong> Em CSS, a propriedade right define a posição horizontal de um elemento posicionado em relação à sua borda direita. Ela funciona em conjunto com a propriedade position para determinar como o elemento se comporta na página. O sufixo right é usado para especificar a distância da borda direita do elemento em relação ao seu ancestral posicionado ou à janela do navegador, dependendo do valor de position.</li>
+                </ul>
+            </section>
+        </div>
+
+        <div class="box-sizing-border-box">
+            <section>
+                <h2>Box-sizing: border-box:</h2>
+                <p> é uma propriedade que define como a largura e a altura de um elemento são calculadas. Ao contrário do valor padrão (content-box), onde a largura e a altura se aplicam apenas ao conteúdo, com border-box, a largura e a altura incluem o conteúdo, o preenchimento (padding) e a borda. Isso significa que, ao adicionar padding ou borda a um elemento, ele não aumenta de tamanho, mas sim, o conteúdo dentro dele é redimensionado para acomodar essas adições, mantendo a largura e altura totais definidas.</p>
+            </section>
+        </div>
+    </main>
+    
+</body>
+</html>
